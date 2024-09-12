@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Matrizes JavaScript</h1>
+
+    <h2>O método concat() </h2>
+
+    <p>O método concat() concateia (une) duas ou mais matrizes: </p>
+
+    <p id="description"></p>
+
+    
+    <script>
+        const arr1 = ["Cecilie", "Solitário "];
+        const arr2 = ["Emil", "Tobias", "Linus"];
+
+        const filhos = arr1.concat(arr2);
+        document.getElementById("description").innerHTML = "Os filhos são: " + filhos;
+    </script>

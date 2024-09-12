@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> Matrizes JavaScript</h1>
+
+    <h2>O copyWithin() copia elementos do array para outra posição em um array, sobrescrevendo valores existentes </h2>
+
+    <p>Copie os dois primeiros elementos da matriz para a terceira e quarta posição: </p>
+    <p id="description"></p>
+    <script>
+        const frutas = ["Banana", "Laranja", "Maçã", "Manga", "Kiwi"];
+        //.at() == [] melhor usar os colxetes, mas é a mesma coisa//
+         frutas.copyWithin(2,0,2);
+
+        document.getElementById("description").innerHTML = frutas;
+    </script>
+
+    <p>O método copyWithin() não é suportado o Internet Explorer.</p>
+</body> 
+</html>
