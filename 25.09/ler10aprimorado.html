@@ -15,7 +15,7 @@
         <input type="number" id="recebedora"><br>
 
         <button type="button" id="guardar">Guardar</button>
-        <button type="button" id="encontrarmenor">Verificar menor</button>
+        <button type="button" onclick="encontrarmenor()">Verificar menor</button>
     </form>
 
     <p id="resultado"></p>
@@ -26,27 +26,28 @@
             let recebedora = parseFloat(document.getElementById("recebedora").value);
 
             //esse !isNaN é para verificar se é número, se não for, não entra no vetor
-            if(!isNaN(recebedora)) {
+            if (!isNaN(recebedora)) {
 
                 nums.push(recebedora);
                 document.getElementById('recebedora').value = ' ';
             }
         }
-        document.getElementById('encontrarmenor').onclick = function () {
+
+        function encontrarmenor() {
             if (nums.length > 0) {
-                let menorNumero = nums[0];
-
-                for (let i = 1; i < nums.length; i++) {
-                    if (nums[i] < menorNumero) {
-                        menorNumero = nums[i];
-                    }
-                }
+                let menorNumero = Math.min(...nums)
                 document.getElementById('resultado').innerText = "Os números digitados foram:" + nums.join(", ") + "\nO menor número digitado foi: " + menorNumero
-
-            }else{
+            } else {
                 document.getElementById('resultado').innerText = "Nenhum número foi armazenado"
             }
         }
+
+
+
+
+        
+
+
 
 
     </script>
